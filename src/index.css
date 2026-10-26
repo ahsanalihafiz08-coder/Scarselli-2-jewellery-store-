@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, Cambria, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+    /* MOBILE DEFAULTS (< 900px): undo rounded corners, 4px buttons & cards */
+    --radius-pill: 4px;
+    --radius-card: 4px;
+    --radius-modal: 4px;
+    --radius-img: 4px;
+    --radius-input: 4px;
+    --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  /* DESKTOP ONLY (900px and wider) */
+  @media (min-width: 900px) {
+    :root {
+      --radius-pill: 999px;
+      --radius-card: 16px;
+      --radius-modal: 20px;
+      --radius-img: 12px;
+      --radius-input: 12px;
+      --shadow-soft: 0 8px 24px rgba(10, 20, 40, 0.08);
+    }
+
+    .reviews-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 24px !important;
+      width: 100% !important;
+      max-width: 1200px !important;
+      margin: 0 auto !important;
+      padding: 0 24px !important;
+      box-sizing: border-box !important;
+      overflow: visible !important;
+    }
+
+    .review-card {
+      min-width: 0 !important;
+      box-sizing: border-box !important;
+      padding: 24px !important;
+      border: 1px solid rgba(255, 255, 255, 0.14) !important;
+      border-radius: 16px !important;
+      background: rgba(255, 255, 255, 0.03) !important;
+      margin: 0 !important;
+      width: auto !important;
+      flex: none !important;
+    }
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #141A24;
+    background-color: #FAF8F5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+.rounded-pill {
+  border-radius: var(--radius-pill);
+}
+
+.rounded-card {
+  border-radius: var(--radius-card);
+}
+
+.rounded-t-card {
+  border-top-left-radius: var(--radius-card);
+  border-top-right-radius: var(--radius-card);
+}
+
+.rounded-modal {
+  border-radius: var(--radius-modal);
+}
+
+.rounded-img {
+  border-radius: var(--radius-img);
+}
+
+.rounded-input {
+  border-radius: var(--radius-input);
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1320;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A364F;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A880;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Scarselli | Fine Diamond Jewellery Atelier New York",
+  "description": "Scarselli is a private fine diamond jewellery atelier on Fifth Avenue in New York, specializing in certified lab-grown diamonds, bespoke engagement rings, and private viewing appointments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
